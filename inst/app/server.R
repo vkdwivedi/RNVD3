@@ -1,4 +1,4 @@
-require(rNVD3)
+require(RNVD3)
 shinyServer(function(input, output) {
   output$myChart <- renderChart({
     hair_eye = as.data.frame(HairEyeColor)
