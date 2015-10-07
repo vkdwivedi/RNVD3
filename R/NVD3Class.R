@@ -78,7 +78,7 @@ NVD3 <- setRefClass('NVD3', fields = list(params = 'list'), methods = list(
       system(sprintf("open %s", tf))
     } else {
       assign(".nvd3_object", .self$copy(), envir = .GlobalEnv) 
-      shiny::runApp(file.path(system.file(package = "rNVD3"), "shiny"))
+      shiny::runApp(file.path(system.file(package = "RNVD3"), "shiny"))
     }
   }
 ))
