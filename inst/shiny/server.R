@@ -1,4 +1,4 @@
-require(rNVD3)
+require(RNVD3)
 shinyServer(function(input, output) {
   output$show <- renderChart({
     return(.nvd3_object)
