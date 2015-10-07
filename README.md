@@ -1,23 +1,21 @@
-<b>NOTE: Features of rNVD3 have now been incorporated into [rCharts](http://github.com/ramnathv/rCharts). rCharts supports
-several other JS charting libraries including NVD3, with a plotting interface familiar to R users. Development will cease
-on rNVD3.</b>
 
-## rNVD3
+
+## RNVD3
 
 This R package provides a familiar plotting interface for R users to create interactive visualizations using [NVD3.js](http://www.nvd3.org).
 
 ### Installation
 
-You can install `rNVD3` from `github` using the `devtools` package
+You can install `RNVD3` from `github` using the `devtools` package
 
 ```{r eval = F}
 require(devtools)
-install_github('rNVD3', 'ramnathv')
+install_github('RNVD3', 'vkdwivedi')
 ```
 
 ### Usage
 
-`rNVD3` uses a formula interface to specify plots, just like the `lattice` package. Here is an example that you can try in your R console
+`RNVD3` uses a formula interface to specify plots, just like the `lattice` package. Here is an example that you can try in your R console
 
 ```{r eval = F}
 hair_eye = subset(as.data.frame(HairEyeColor), Sex == "Female")
@@ -27,7 +25,7 @@ p1
 p1$save('haireye.html')
 ```
 
-`rNVD3` is also compatible with [Slidify](http://slidify.org). Here is a [slide deck](http://ramnathv.github.io/slidifyExamples/examples/rNVD3) with examples. **Note that `rNVD3` plots work best in Google Chrome.**
+`RNVD3` is also compatible with [Slidify](http://slidify.org). Here is a [slide deck](http://ramnathv.github.io/slidifyExamples/examples/rNVD3) with examples. **Note that `RNVD3` plots work best in Google Chrome.**
 
 More documentation is underway.
 
@@ -35,7 +33,7 @@ More documentation is underway.
 
 ```
 ## server.r
-require(rNVD3)
+require(RNVD3)
 shinyServer(function(input, output) {
   output$myChart <- renderChart({
     hair_eye = as.data.frame(HairEyeColor)
@@ -47,9 +45,9 @@ shinyServer(function(input, output) {
 })
 
 ## ui.R
-require(rNVD3)
+require(RNVD3)
 shinyUI(pageWithSidebar(
-  headerPanel("rNVD3: Interactive Charts from R using NVD3.js"),
+  headerPanel("RNVD3: Interactive Charts from R using NVD3.js"),
   
   sidebarPanel(
     selectInput(inputId = "gender",
@@ -72,7 +70,7 @@ shinyUI(pageWithSidebar(
 
 ### Credits
 
-Most of the implementation in `rNVD3` is inspired by [rHighcharts](https://github.com/metagraf/rHighcharts) and [rVega](https://github.com/metagraf/rVega). I have reused some code from these packages verbatim, and would like to acknowledge the efforts of its author [Thomas Reinholdsson](https://github.com/reinholdsson).
+Most of the implementation in `RNVD3` is inspired by [rHighcharts](https://github.com/metagraf/rHighcharts) and [rVega](https://github.com/metagraf/rVega). I have reused some code from these packages verbatim, and would like to acknowledge the efforts of its author [Thomas Reinholdsson](https://github.com/reinholdsson).
 
 ### License
 
@@ -82,9 +80,5 @@ MIT
 
 There has been a lot of interest recently in creating packages that allow R users to make use of Javascript charting libraries. 
 
-- [gg2v](https://github.com/hadley/gg2v) by [Hadley Wickham](https://github.com/hadley)
-- [clickme](https://github.com/nachocab/clickme) by [Nacho Caballero](https://github.com/nachocab)
-- [rHighcharts](https://github.com/metagraf/rHighcharts) by [Thomas Reinholdsson](https://github.com/reinholdsson)
-- [rHighcharts](https://github.com/metagraf/rVega) by [Thomas Reinholdsson](https://github.com/reinholdsson)
 - [rCharts](https://github.com/ramnathv/rCharts) by [Ramnath Vaidyanathan](https://github.com/ramnathv)
 
