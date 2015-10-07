@@ -1,4 +1,4 @@
-require(rNVD3)
+require(RNVD3)
 shinyUI(pageWithSidebar(
   headerPanel("rNVD3: Interactive Charts from R using NVD3.js"),
   
