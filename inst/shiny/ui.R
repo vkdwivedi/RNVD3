@@ -1,4 +1,4 @@
-require(rNVD3)
+require(RNVD3)
 shinyUI(bootstrapPage(
   showOutput("show")
 ))
